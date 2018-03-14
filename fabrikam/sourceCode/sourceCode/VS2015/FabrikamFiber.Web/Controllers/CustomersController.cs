@@ -39,7 +39,10 @@ namespace FabrikamFiber.Web.Controllers
                 this.customerRepository.Save();
                 return RedirectToAction("Index");
             }
-            
+
+            if (customer.FirstName != null || customer.FirstName.Length < 5)
+                throw new System.Exception("Can't be shortern then 5...");
+
             return this.View();
         }
 

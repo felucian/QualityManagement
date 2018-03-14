@@ -740,7 +740,7 @@ namespace FabrikamFiber.DAL.Data
             {
                 query = query.Include(includeProperty);
             }
-
+            
             return query;
         }
 
